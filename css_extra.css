@@ -3,3 +3,17 @@ p {
   text-align: left;
   word-wrap: break-word;
 }
+
+a {color:rgb(171,133,33);}
+a:link  {text-decoration: underline;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+
+.ust-blue {
+  color: rgb(0,64,120);
+}
+
+.ust-mustard {
+  color: rgb(171,133,33);
+}

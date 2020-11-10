@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<title>Ocean Modelling and Fluids Group</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+
+<link rel="stylesheet" href="./css_extra.css">
+<body id="myPage">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-highway-blue">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="index.html" class="w3-bar-item w3-button w3-highway-blue"><i class="fa fa-home w3-margin-right"></i>Ocean Modelling and Fluids Group</a>
+  <a href="research.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Research</a>
+  <a href="team.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="#software" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Software</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="research.html" class="w3-bar-item w3-button">Research</a>
+    <a href="team.html" class="w3-bar-item w3-button">Team</a>
+    <a href="#software" class="w3-bar-item w3-button">Software</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  </div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center">
+<h2>Active research projects</h2>
+
+<div class="w3-row w3-center" style="width:70%;margin:auto;">
+
+<div class="w3-container w3-padding-16 w3-center">
+
+<h2>Mesoscale eddy parameterization</h2>
+
+<img src="./pics/sector_GEOMETRIC.png" style="width:70%">
+
+<p>
+In its present form, <a href="https://www.marshallocean.net/geometric/" target="_blank">GEMOETRIC</a> is an eddy energy constrained mesoscale eddy parameterisation, i.e. the standard eddy induced transport coefficient scales with a distribution of the parameterised eddy, which itself evolves according to some equation (see for example the <a href="https://nemo-related.readthedocs.io/en/latest/GEOMETRIC/geometric.html" target="_blank">GEOMETRIC NEMO notes</a>). We have been instrumental in getting the GEOMETRIC code into some ocean general circulation models (e.g. MITgcm + NEMO, <i>repository to come</i>), and demonstrating how GEOMETRIC has led to some improvements in the modelled ocean climatology sensitivity.
+</p>
+
+<p>
+There are a few areas of investigation this group is leading in relation to GEOMETRIC (see also some work led by <a href="https://www.marshallocean.net/" target="_blank">David Marshall</a>):
+</p>
+<ul style="text-align:left">
+  <li>
+    <b>parameter inference from an optimisation point of view</b><br>
+    -- collaborators: <a href="https://scholar.google.com/citations?user=UdWjNgEAAAAJ&hl=en" target="_blank">Tomos David</a> (ENS Lyon), <a href="https://www.imperial.ac.uk/people/a.avdis" target="_blank">Alexandros Avdis</a> (Imperial) Han Seul Lee and Yongsu Na (HKUST)
+  </li>
+  <li>
+    <b>state estimates and dynamical parameter inference</b><br>
+    -- collaborators: Yongsu Na (HKUST)
+  </li>
+  <li>
+    <b>impact on OMIP projections</b><br>
+    -- collaborators: <a href="https://scholar.google.com/citations?user=K_6jvggAAAAJ&hl=en" target="_blank">George Nurser</a> (NOC Southampton), <a href="https://www.marshallocean.net/" target="_blank">David Marshall</a> (Oxford)
+  </li>
+  <li>
+    <b>mesoscale activities and parameterisation over slopes</b><br>
+    -- collaborators: Yongqi Liu and <a href="https://yanwanghkust.github.io/people/" target="_blank">Yan Wang</a> (HKUST)
+  </li>
+  <li>
+    <b>time-scales associated with the GEOMETRIC parameterisation</b><br>
+    -- collaborators (sort of): <a href="https://www.ocean.washington.edu/home/Georgy_Manucharyan" target="_blank">Georgy Manucharyan</a>
+  </li>
+  <li>
+    <b>parameterisations with internally consistent energy cycles</b>
+  </li>
+</ul>
+
+</div>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<div class="w3-container w3-padding-16 w3-center">
+
+<h2>Ocean modelling</h2>
+
+<img src="./pics/south_china_sea_arial.png" style="width:70%">
+
+<p>
+We create toy, idealised and realistic ocean models to answer a variety of problems in dynamics as well as those in biogeochemical and ecological context, which will be made publicly available in due course. We are relatively agnostic with the choice of models, and usually the scientific questions dictate the models to be used; the main ones we use so far are <a href="https://www.firedrakeproject.org/" target="_blank">Firedrake</a>, <a href="https://www.nemo-ocean.eu/" target="_blank">NEMO</a>, <a href="https://mitgcm.readthedocs.io/en/latest/" target="_blank">MITgcm</a>, <a href="https://getm.eu/" target="_blank">GETM</a>.
+</p>
+
+<ul style="text-align:left">
+  <li>
+    <b>inference problems for South China Sea circulation</b> (Firedrake and MITgcm w/ AD tools)<br>
+    -- collaborators: Han Seul Lee and Yongsu Na (HKUST), <a href="https://mmazloff.scrippsprofiles.ucsd.edu/" target="_blank">Matt Mazloff</a> (Scripps)
+  </li>
+  <li>
+    <b>vertical resolution, internal waves, and ecological consequences</b> (NEMO)<br>
+    -- collaborators: Bobo Ruan and <a href="http://www.oceanecol.com/" target="_blank">Alex Wyatt</a> (HKUST)
+  </li>
+  <li>
+    <b>South China Sea circulation and global circulation interactions</b> (NEMO w/ <a href="https://www-ljk.imag.fr/MOISE/AGRIF/" target="_blank">AGRIF</a>)<br>
+    -- collaborators: Bobo Ruan (HKUST)
+  </li>
+  <li>
+    <b>tracer dispersion and connectivity in the Lagrangian framework</b> (NEMO w/ <a href="https://forge.ipsl.jussieu.fr/nemo/wiki/Users/AnalysisTools" target="_blank">Ariane</a> and/or <a href="https://oceanparcels.org/" target="_blank">OceanParcels</a>)<br>
+    -- collaborators: Bobo Ruan, Floriane Sudre, <a href="http://www.oceanecol.com/" target="_blank">Alex Wyatt</a> (HKUST), <a href="https://noc.ac.uk/people/cwlsn-r7wjj" target="_blank">Chris Wilson</a> (NOC Liverpool)
+  </li>
+</ul>
+
+</div>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<div class="w3-container w3-padding-16 w3-center">
+
+<h2>Chaotic mixing, turbulent dispersion, and transport by circulation</h2>
+
+</div>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+<div class="w3-container w3-padding-16 w3-center">
+
+<h2>Geophysical fluid dynamics</h2>
+
+</div>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
+
