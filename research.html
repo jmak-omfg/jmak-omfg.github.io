@@ -72,12 +72,18 @@
 							  <p>
 							    <span class="image left"><a href="pics/sector_GEOMETRIC.png"><img src="pics/sector_GEOMETRIC.png" alt="sector_geometric" /></a></span>A part of studying <i>eddy/wave-mean flow interaction</i> concerns <i>parameterisation</i>, i.e. representation of sub-grid physics in models. At present we have a focus on <i>eddy energy constrained mesoscale eddy parameterisations</i> associated with baroclinic instabilities (cf. eddies that are at mesoscale lengths, which do not necessarily have to come from baroclinic instability). In particular, we concentrate on developing, implementing and assessing the impact of the <a href="https://www.marshallocean.net/geometric/" target="_blank">GEOMETRIC</a> scheme. So far we have GEOMETRIC implemented in MITgcm (w/ <a href="https://www.maths.ed.ac.uk/~jmaddis2/" target="_blank">James Maddison</a>), <a href="https://www.nemo-ocean.eu/" target="_blank">NEMO</a> (w/ <a href="https://www.locean-ipsl.upmc.fr/index.php?option=com_content&view=article&id=292&Itemid=143&lang=fr" target="_blank">Gurvan Madec</a>) and <a href="https://github.com/NOAA-GFDL/MOM6" target="_blank">MOM6</a> (NCAR branch, largely thanks to <a href="https://staff.ucar.edu/users/bachman" target="_blank">Scott Bachman</a>).
 							  </p>
-<!--							  <p><span class="image right"><img src="images/pic02.jpg" alt="" /></span>text</p>-->
+							  
+							  <p>
+							    <span class="image right"><a href="pics/uq_eddy_force_function.png"><img src="pics/uq_eddy_force_function.png" alt="uq_ffd" /></a></span>One topic we are looking into is on the application of machine learning algorithms for learning about eddy flux and mean state relations, which is central to eddy parameterisation. A technical complication however arises from the fact that rotational fluxes play no role in the dynamics. The questions are how do we get rid of it, do we actually need to get rid of it, and if so what benefits does doing so afford?
+							  </p>
 							    <li>
 							      <u>J. Mak</u>, J. R. Maddison, D. P. Marshall &amp; D. R. Munday (2018) [<a href="https://doi.org/10.1175/JPO-D-18-0017.1" target="_blank" class="bodylink">doi</a>], <i>J. Phys. Oceanogr.</i>, <b>48</b>, 2363-2382
 							    </li>
 							    <li>
 							      <u>J. Mak</u>, D. P. Marshall, J. R. Maddison &amp; S. D. Bachman (2017) [<a href="http://dx.doi.org/10.1016/j.ocemod.2017.02.007" target="_blank" class="bodylink">doi</a>], <i>Ocean Modell.</i>, <b>112</b>, 125-138
+							    </li>
+							    <li>
+							      <u>J. Mak</u>, J. R. Maddison &amp; D. P. Marshall (2016) [<a href="http://dx.doi.org/10.1016/j.ocemod.2016.06.006" target="_blank" class="bodylink">doi</a>], <i>Ocean Modell.</i>, <b>104</b>, 252-268<br>
 							    </li>
 							  </p>
 						</div>
@@ -93,24 +99,36 @@
 					
 					<section id="stirring" class="wrapper alt style4">
 						<div class="inner">
-							<p style="font-size:16pt">Chaotic/turbulent stirring and transport</p>
+							<span style="font-size:24pt; letter-spacing: 0.025em;"><h2>Chaotic/turbulent stirring and transport</h2></span>
 							
 						</div>
 					</section>
 					
 					<section id="gfd" class="wrapper style5">
 						<div class="inner">
-							<span style="font-size:24pt; letter-spacing: 0.025em;"><h2>(Geophysical) Fluid Dyanmics</h2></span>
+							<span style="font-size:24pt; letter-spacing: 0.025em;"><h2>Theoretical Fluid Dynamics</h2></span>
 							
 <!--							<p style="font-size:16pt"></p>-->
 							  <p>
-							    <span class="image left"><a href="pics/uq_eddy_force_function.png"><img src="pics/uq_eddy_force_function.png" alt="uq_ffd" /></a></span>to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in to be filled in 
+							    <span class="image left"><a href="images/pic02.jpg"><img src="images/pic02.jpg" alt="uq_ffd" /></a></span>We have a particular focus on shear instabilities, particularly with baroclinic instabilities (in the geophysical as well as astrophysical context), and interaction of waves as an explanation to instability. One current focus is on <i>baroclinic equilibration</i> and <i>baroclinic lifecycles</i>. While in some sense these are rather old topics, open and fundamental questions remain, such as "can we predict the equilibration state given initial state", or "what are the mechanisms governing equilibration", even within an at-first-sight-simple spindown problem in a quasi-geostrophic two layer system. Other questions, such as the extent of quasi-linear control on the nonlinear dynamics, and mechanistic explanations of the <i>barotropic governor</i> mechanism, are also being pursued.
+							    <br>
+							    <br>
+							  </p>
+							  
+							  <p>
+							    <span class="image right"><a href="images/pic02.jpg"><img src="images/pic02.jpg" alt="uq_ffd" /></a></span>Another topic we are looking into is that of baroclinic instability over slopes, which has applications for ocean eddy parameterisations. It is generally understood that baroclinic instability is suppressed over the ocean continental shelves and slopes, and in turn suppressing mesoscale eddies in these regions. From a parameterisation point of view this suggests we need to suppress the mesoscale parameterisation scheme over these regions, but how do we do this in a physically informed way, and what are the consequences if we don't do it properly? We are also re-examining aspects of the instability process over the slopes, to understand the physical mechanism leading to the suppression of instability and the implied feedback onto the mean state.
+							  </p>
+							  
+							  <p>
+							    <span class="image left"><a href="images/pic02.jpg"><img src="images/pic02.jpg" alt="uq_ffd" /></a></span>How would the equivalent problem for a ionised fluid behave, i.e. within the <i>magnetohydrodynamic</i> (MHD) description? In the case of the Earth's core, stellar interiors or generally in astrophysics, the fluid is electronically conducting and therefore influenced by magnetic forces, leading additional phenomena. The hydrodynamic studies provide a valuable reference for the analogous MHD problems, and possible vice-versa. Past research includes equilibration of MHD shear flow instabilities, and explanation of the instabilities in terms of wave interaction. One piece of recent research involves formal analogies to do with GFD and plasma waves. The PI maintains an interest in shear instabilities within the framework of Hamiltonian fluid mechanics and symmetry breaking aspects (in both the GFD and MHD context) should a potential student/post-doc want to look into more theoretical topics.
+							    <br>
+							    <br>
 							  </p>
 <!--							  <p><span class="image right"><img src="images/pic02.jpg" alt="" /></span>text</p>-->
 <!--							    <li>-->
 <!--							      <u>J. Mak</u>, J. R. Maddison, D. P. Marshall &amp; D. R. Munday (2018) [<a href="https://doi.org/10.1175/JPO-D-18-0017.1" target="_blank" class="bodylink">doi</a>], <i>J. Phys. Oceanogr.</i>, <b>48</b>, 2363-2382-->
 <!--							    </li>-->
-							  </p>
+<!--							  </p>-->
 							
 						</div>
 					</section>
