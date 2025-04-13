@@ -66,34 +66,78 @@
 					
 					<section id="eddy" class="wrapper alt style2">
 						<div class="inner">
-						  <span style="font-size:24pt; letter-spacing: 0.025em;"><h2>Eddy parameterisation</h2></span>
+						  <span style="font-size:24pt; letter-spacing: 0.025em;"><h2>Eddy parameterisation + Ocean modelling</h2></span>
 							
-<!--							<p style="font-size:16pt"></p>-->
 							  <p>
-							    <span class="image left"><a href="pics/sector_GEOMETRIC.png"><img src="pics/sector_GEOMETRIC.png" alt="sector_geometric" /></a></span>A part of studying <i>eddy/wave-mean flow interaction</i> concerns <i>parameterisation</i>, i.e. representation of sub-grid physics in models. At present we have a focus on <i>eddy energy constrained mesoscale eddy parameterisations</i> associated with baroclinic instabilities (cf. eddies that are at mesoscale lengths, which do not necessarily have to come from baroclinic instability). In particular, we concentrate on developing, implementing and assessing the impact of the <a href="https://www.marshallocean.net/geometric/" target="_blank">GEOMETRIC</a> scheme. So far we have GEOMETRIC implemented in MITgcm (w/ <a href="https://www.maths.ed.ac.uk/~jmaddis2/" target="_blank">James Maddison</a>), <a href="https://www.nemo-ocean.eu/" target="_blank">NEMO</a> (w/ <a href="https://www.locean-ipsl.upmc.fr/index.php?option=com_content&view=article&id=292&Itemid=143&lang=fr" target="_blank">Gurvan Madec</a>) and <a href="https://github.com/NOAA-GFDL/MOM6" target="_blank">MOM6</a> (NCAR branch, largely thanks to <a href="https://staff.ucar.edu/users/bachman" target="_blank">Scott Bachman</a>).
+							    <span class="image left"><a href="pics/sector_GEOMETRIC.png"><img src="pics/sector_GEOMETRIC.png" alt="sector_geometric" /></a></span>A part of studying <i>eddy/wave-mean flow interaction</i> concerns <i>parameterisation</i>, i.e. representation of sub-grid physics in models. At present we have a focus on <i>eddy energy constrained mesoscale eddy parameterisations</i> associated with baroclinic instabilities. In particular, we concentrate on developing, implementing and assessing the impact of the <a href="https://www.marshallocean.net/geometric/" target="_blank">GEOMETRIC</a> scheme. So far we have GEOMETRIC implemented in MITgcm (w/ <a href="https://www.maths.ed.ac.uk/~jmaddis2/" target="_blank">James Maddison</a>), <a href="https://www.nemo-ocean.eu/" target="_blank">NEMO</a> (w/ <a href="https://www.locean-ipsl.upmc.fr/index.php?option=com_content&view=article&id=292&Itemid=143&lang=fr" target="_blank">Gurvan Madec</a>) and <a href="https://github.com/NOAA-GFDL/MOM6" target="_blank">MOM6</a> (NCAR branch, largely thanks to <a href="https://staff.ucar.edu/users/bachman" target="_blank">Scott Bachman</a>).
 							  </p>
 							  
 							  <p>
-							    <span class="image right"><a href="pics/uq_eddy_force_function.png"><img src="pics/uq_eddy_force_function.png" alt="uq_ffd" /></a></span>One topic we are looking into is on the application of machine learning algorithms for learning about eddy flux and mean state relations, which is central to eddy parameterisation. A technical complication however arises from the fact that rotational fluxes play no role in the dynamics. The questions are how do we get rid of it, do we actually need to get rid of it, and if so what benefits does doing so afford?
+							    <span class="image right"><a href="pics/schematic.jpg"><img src="pics/schematic.jpg" alt="splitting" /></a></span>One topic we are looking into is on applying parameterisations in eddy permitting resolutions, where there is some sentiment suggesting GEOMETRIC surely cannot function in that regime (because it is a GM-based scheme so should have issues with damping explicit eddies, e.g. <a href="https://i.imgur.com/gVPN6j2.mp4" target="_blank">video where GM-based schemes are switched on at model year 500</a>). Revisiting the original reason on why GM schemes damp the explicit fluctuations, we have a proposal that circumvents the problem. Current work is on further adapting the proposal and testing these out in various settings to evaluate the associated skill and/or shortfalls.
 							  </p>
-							    <li>
-							      <u>J. Mak</u>, J. R. Maddison, D. P. Marshall &amp; D. R. Munday (2018) [<a href="https://doi.org/10.1175/JPO-D-18-0017.1" target="_blank" class="bodylink">doi</a>], <i>J. Phys. Oceanogr.</i>, <b>48</b>, 2363-2382
-							    </li>
-							    <li>
-							      <u>J. Mak</u>, D. P. Marshall, J. R. Maddison &amp; S. D. Bachman (2017) [<a href="http://dx.doi.org/10.1016/j.ocemod.2017.02.007" target="_blank" class="bodylink">doi</a>], <i>Ocean Modell.</i>, <b>112</b>, 125-138
-							    </li>
-							    <li>
-							      <u>J. Mak</u>, J. R. Maddison &amp; D. P. Marshall (2016) [<a href="http://dx.doi.org/10.1016/j.ocemod.2016.06.006" target="_blank" class="bodylink">doi</a>], <i>Ocean Modell.</i>, <b>104</b>, 252-268<br>
-							    </li>
+							  
+							  <p>
+							    Some of the research here overlaps with inverse / data-driven methods, and the more theoretical projects.
 							  </p>
+							  
+						    <li>
+						      <u>X. Ruan</u>, D. Couespel, M. Lévy, J. Li, <u>J. Mak</u>^ &amp Y. Wang (2024) [<a href="https://doi.org/10.1016/j.ocemod.2024.102396" target="_blank" class="bodylink">doi</a>], <i>Ocean Modell.</i>, <b>190</b>, 102396
+						    </li>
+						    <li>
+						      H. Wei, Y. Wang &amp <u>J. Mak</u> (2024) [<a href="https://doi.org/10.1175/JPO-D-23-0152.1" target="_blank" class="bodylink">doi</a>], <i>J. Phys. Oceanogr.</i>, <b>54</b>(2), 359-377
+						    </li>
+                <li>
+						      <u>J. Mak</u>, J. R. Maddison, D. P. Marshall, X. Ruan, Y. Wang &amp L. Yeow (2023) [<a href="https://doi.org/10.1029/2023MS003886" target="_blank" class="bodylink">doi</a>], <i>J. Adv. Model. Earth. Syst.</i>, <b>15</b>(12), e2023MS003886
+						    </li>
+						    <li>
+						      R. Torres, R. Waldman, <u>J. Mak</u> &amp R. Séférian (2023) [<a href="https://doi.org/10.1029/2023GL104688" target="_blank" class="bodylink">doi</a>], <i>Geophys. Res. Lett.</i>, <b>50</b>(20), e2023GL104688
+						    </li>
+                <li>
+						      <u>X. Ruan</u>, D. Couespel, M. Lévy, J. Li, <u>J. Mak</u>^ &amp Y. Wang (2023) [<a href="https://doi.org/10.1016/j.ocemod.2023.102204" target="_blank" class="bodylink">doi</a>], <i>Ocean Modell.</i>, <b>183</b>, 102204
+						    </li>
+                <li>
+						      <u>J. Mak</u>, D. P. Marshall, G. Madec &amp J. R. Maddison (2022) [<a href="https://doi.org/10.1029/2021GL097259" target="_blank" class="bodylink">doi</a>], <i>Geophys. Res. Lett.</i>, <b>49</b>(8), e2021GL097259
+						    </li>
+						    <li>
+						      <u>J. Mak</u>, J. R. Maddison, D. P. Marshall &amp; D. R. Munday (2018) [<a href="https://doi.org/10.1175/JPO-D-18-0017.1" target="_blank" class="bodylink">doi</a>], <i>J. Phys. Oceanogr.</i>, <b>48</b>, 2363-2382
+						    </li>
+						    <li>
+						      <u>J. Mak</u>, D. P. Marshall, J. R. Maddison &amp; S. D. Bachman (2017) [<a href="http://dx.doi.org/10.1016/j.ocemod.2017.02.007" target="_blank" class="bodylink">doi</a>], <i>Ocean Modell.</i>, <b>112</b>, 125-138
+						    </li>
+						    <li>
+						      <u>J. Mak</u>, J. R. Maddison &amp; D. P. Marshall (2016) [<a href="http://dx.doi.org/10.1016/j.ocemod.2016.06.006" target="_blank" class="bodylink">doi</a>], <i>Ocean Modell.</i>, <b>104</b>, 252-268
+						    </li>
 						</div>
 					</section>
 					
 					<section id="inverse" class="wrapper style3">
 						<div class="inner">
-						  <span style="font-size:24pt; letter-spacing: 0.025em;"><h2>Inverse methods + state estimates</h2></span>
+						  <span style="font-size:24pt; letter-spacing: 0.025em;"><h2>Inverse / data-driven / machine learning problems</h2></span>
 							<p style="font-size:16pt"></p>
 							
+							  <p>
+							    <span class="image left"><a href="pics/sector_GEOMETRIC.png"><img src="pics/lam_opt_eps5e15.png" alt="lam_opt" /></a></span>One piece of work motivated by the work on eddy parameterisation and GEOMETRIC is on <i>parameter inference</i>. In some previous work we found that the performance of GEOMETRIC crucially depends on the eddy energy dissipation parameter, but this parameter depends on a multitude of different dynamical processes. As a way to constrain the distribution and magnitudes of this parameter, we ask the reverse question: "if we ended up with what we observe, what should we have chosen in the first place to have got here?" This is a standard inference type calculation, and a way we did it is given in the figure here, solving an optimisation of the kind we did at some point for inferring the eddy diffusivity.
+							  </p>
+							
+							  <p>
+							    <span class="image right"><a href="pics/uq_eddy_force_function.png"><img src="pics/uq_eddy_force_function.png" alt="uq_ffd" /></a></span>Another topic we are looking into is on the application of machine learning algorithms for learning about eddy flux and mean state relations, which is central to eddy parameterisation. A technical complication however arises from the fact that rotational fluxes play no role in the dynamics. The questions are how do we get rid of it, do we actually need to get rid of it, and if so what benefits does doing so afford? We are also looking to do similar things, but with a dynamical model constraining the evolution of the model (cf. what is done in state estimates as in <a href="https://ecco-group.org/" target="_blank">ECCO</a>, or in data assimilation methodologies such as <a href="https://www.ecmwf.int/en/newsletter/175/earth-system-science/linearised-physics-heart-ecmwfs-4d-var" target="_blank">4DVAR</a>).
+							  </p>
+							  
+							  <li>
+						      <u>F. E. Yan</u>, H. Frezat, J. Le Sommer, <u>J. Mak</u> &amp K. Otness (in review with JAMES) [<a href="https://arxiv.org/abs/2411.14106" target="_blank" class="bodylink">preprint</a>]
+						    </li>
+						    <li>
+						      <u>F. E. Yan</u>, <u>J. Mak</u> &amp Y. Wang (2024) [<a href="https://doi.org/10.1029/2023MS003915" target="_blank" class="bodylink">doi</a>],  <i>J. Adv. Model. Earth. Syst.</i>, <b>16</b>(2), e2023MS003915
+						    </li>
+						    <li>
+						      R. Torres, R. Waldman, <u>J. Mak</u> &amp R. Séférian (2023) [<a href="https://doi.org/10.1029/2023GL104688" target="_blank" class="bodylink">doi</a>], <i>Geophys. Res. Lett.</i>, <b>50</b>(20), e2023GL104688
+						    </li>
+                <li>
+						      <u>J. Mak</u>, A. Avdis, T. W. David, H. S. Lee, Y. Na, Y. Wang &amp F. E. Yan (2022) [<a href="https://doi.org/10.1029/2022MS003223" target="_blank" class="bodylink">doi</a>], <i>J. Adv. Model. Earth. Syst.</i>, <b>14</b>(11), e2022MS003223
+						    </li>
+						    <li>
+						      <u>J. Mak</u>, J. R. Maddison &amp; D. P. Marshall (2016) [<a href="http://dx.doi.org/10.1016/j.ocemod.2016.06.006" target="_blank" class="bodylink">doi</a>], <i>Ocean Modell.</i>, <b>104</b>, 252-268
+						    </li>
 						</div>
 					</section>
 					
@@ -106,7 +150,7 @@
 					
 					<section id="gfd" class="wrapper style5">
 						<div class="inner">
-							<span style="font-size:24pt; letter-spacing: 0.025em;"><h2>Theoretical Fluid Dynamics</h2></span>
+							<span style="font-size:24pt; letter-spacing: 0.025em;"><h2>Theoretical problems (mostly fluids)</h2></span>
 							
 <!--							<p style="font-size:16pt"></p>-->
 							  <p>
@@ -124,11 +168,37 @@
 							    <br>
 							    <br>
 							  </p>
-<!--							  <p><span class="image right"><img src="images/pic02.jpg" alt="" /></span>text</p>-->
-<!--							    <li>-->
-<!--							      <u>J. Mak</u>, J. R. Maddison, D. P. Marshall &amp; D. R. Munday (2018) [<a href="https://doi.org/10.1175/JPO-D-18-0017.1" target="_blank" class="bodylink">doi</a>], <i>J. Phys. Oceanogr.</i>, <b>48</b>, 2363-2382-->
-<!--							    </li>-->
-<!--							  </p>-->
+							  
+                <li>
+						      <u>H. S. Lee</u>, J. R. Maddison, <u>J. Mak</u>, D. P. Marshall &amp Y. Wang (in revision with Tellus A) [<a href="" target="_blank" class="bodylink">preprint</a>], <i>Tellus A</i>
+						    </li>
+						    <li>
+						      J. R. Maddison, D. P. Marshall, <u>J. Mak</u> &amp K. Maurer-Song (accepted) [<a href="https://arxiv.org/abs/2409.18035" target="_blank" class="bodylink">preprint</a>], <i>J. Adv. Model. Earth. Syst.</i>
+						    </li>
+							  <li>
+						      <u>J. Mak</u>, N. Harnik, E. Heifetz, <u>G. Kumar</u> &amp <u>E. Q. Y. Ong</u> (2024) [<a href="https://link.aps.org/doi/10.1103/PhysRevFluids.9.083905" target="_blank" class="bodylink">doi</a>], <i>Phys. Rev. Fluids</i>, <b>9</b>(8), 083905
+						    </li>
+							  <li>
+						      E. Heifetz, L. R. M. Maas, <u>J. Mak</u> &amp; I. Pomerantz (2022) [<a href="https://doi.org/10.1063/5.0120375" target="_blank" class="bodylink">doi</a>], <i>Phys. Fluids</i>, <b>34</b>, 116608
+						    </li>
+						    <li>
+						      E. Heifetz, L. R. M. Maas &amp <u>J. Mak</u> (2021) [<a href="https://doi.org/10.1063/5.0075911" target="_blank" class="bodylink">doi</a>], <i>Phys. of Fluids</i>, <b>33</b>(12), 127120
+						    </li>
+							  <li>
+						      E. Heifetz, L. R. M. Maas, <u>J. Mak</u> &amp; I. Pomerantz (2021) [<a href="https://doi.org/10.1088/2399-6528/ac3eec" target="_blank" class="bodylink">doi</a>], <i>J. Phys. Commun.</i>, <b>5</b>(12), 125006
+						    </li>
+						    <li>
+						      <u>J. Mak</u>, S. D. Griffiths &amp; D. W. Hughes (2016) [<a href="http://dx.doi.org/10.1017/jfm.2015.718" target="_blank" class="bodylink">doi</a>],  <i>J. Fluid Mech.</i>, <b>788</b>, 767-796
+						    </li>
+						    <li>
+						      E. Heifetz &amp; <u>J. Mak</u> (2015) [<a href="http://dx.doi.org/10.1063/1.4928738" target="_blank" class="bodylink">doi</a>], <i>Phys. of Fluids</i>, <b>27</b>, 086601, 1-15
+						    </li>
+                <li>
+						      E. Heifetz, <u>J. Mak</u>, J. Nycander &amp; O. M. Umurhan (2015) [<a href="http://dx.doi.org/10.1017/jfm.2015.47" target="_blank" class="bodylink">doi</a>], <i>J. Fluid Mech.</i>, <b>767</b>, 199-225
+						    </li>
+						    <li>
+						      M. A. Moyers-Gonzalez, T. Burghlea &amp; <u>J. Mak</u> (2011) [<a href="http://dx.doi.org/10.1016/j.jnnfm.2011.02.007" target="_blank" class="bodylink">doi</a>], <i>J. Non-Newtonian Fluid Mech.</i>, <b>166</b>, 515-531
+						    </li>
 							
 						</div>
 					</section>
